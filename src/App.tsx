@@ -12,8 +12,7 @@ function App() {
       <Header>Header</Header>
 
       <Input placeholder='Input' />
-      <Button text='Click'>Click me</Button>
-      <button></button>
+      <Button onClick={() => {alert('a')}} text='a'>Click me</Button>
       <Footer>Footer</Footer>
     </div>
   );
