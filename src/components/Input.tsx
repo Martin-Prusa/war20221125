@@ -5,5 +5,17 @@ interface InputProps {
 }
 
 export const Input = ({placeholder}: InputProps) => {
-    return (<input placeholder={placeholder}></input>)
+
+    const [wordLength, setWordLength] = React.useState(0)
+
+    const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setWordLength(e.target.value.length)
+    }
+
+    return (
+    <div>
+        <input onChange={handleOnChange} placeholder={placeholder}></input><br />
+        <small>{wordLength}</small>
+    </div>
+    )
 }
